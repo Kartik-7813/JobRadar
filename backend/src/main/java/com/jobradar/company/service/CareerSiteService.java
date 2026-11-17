@@ -89,6 +89,10 @@ public class CareerSiteService {
         return careerSiteRepository.findAllByActiveTrue();
     }
 
+    public List<CareerSite> getAllCareerSites() {
+        return careerSiteRepository.findAll();
+    }
+
     public List<CareerSite> getCareerSitesByAtsProvider(AtsProvider atsProvider) {
         if (atsProvider == null) {
             throw new InvalidInputException("ATS provider cannot be null");
